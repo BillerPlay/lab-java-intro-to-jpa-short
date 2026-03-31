@@ -16,15 +16,6 @@ public class FlightBooking {
     @Column(name = "flight_id", nullable = false)
     private Integer flightId;
 
-    //  Adding foreign keys (information from Internet)
-    @OneToOne
-    @JoinColumn(name="customer_id", referencedColumnName = "customer_id")
-    private Customer customer;
-
-    @OneToOne
-    @JoinColumn(name="flight_id", referencedColumnName = "flight_id")
-    private Flight flight;
-
     //  Required empty constructor by JPA
     public FlightBooking() {}
 
